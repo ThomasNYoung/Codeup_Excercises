@@ -23,13 +23,14 @@ $books = array(
 );
 
 foreach ($books as $key => $book) {
-	
-	echo "\n";
-	echo "title: $key\n";
-	foreach ($book as $key => $value) {
-		echo "$key: $value\n";
-	}
+	// if($book['published']>1950){
+		echo "\n";
+		echo "$key\n";
+		foreach ($book as $key => $value) {
+			echo ucfirst("$key: $value\n");
+		}
+		echo "=======================" . PHP_EOL;
+		// }
 }
-
 
 ?>
