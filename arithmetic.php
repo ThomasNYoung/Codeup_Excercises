@@ -2,46 +2,57 @@
 
 function add($a, $b){
 	if(is_numeric($a) && is_numeric($b)){
-    	return $a + $b;
+    	return $a + $b . PHP_EOL;
 	}else {
-		return "ERROR: both arguments must be numbers" . PHP_EOL;
+		error();
 	}
 }
 
 function subtract($a, $b){
 	if(is_numeric($a) && is_numeric($b)){
-    	return $a-$b;
+    	return $a-$b . PHP_EOL;
 	}else {
-		return "ERROR: both arguments must be numbers" . PHP_EOL;
+		error();
 	}
 }
 function multiply($a, $b){
 	if(is_numeric($a) && is_numeric($b)){
-    	return $a*$b;
+    	return $a*$b . PHP_EOL;
 	}else {
-		return "ERROR: both arguments must be numbers" . PHP_EOL;
+		error();
 	}
 }
 function divide($a, $b){
 	 if ($a==0 || $b==0) {
-		return "ERROR: you CANNOT divide by zero" . PHP_EOL;
+		zeroError();
+		return false;
 	}
 	if(is_numeric($a) && is_numeric($b)){
-    	return $a/$b;
+    	return $a/$b . PHP_EOL;
 	}else {
-		return "ERROR: both arguments must be numbers" . PHP_EOL;
+		error();
 	}
 }	
 function modulus($a, $b){
+	if ($a==0 || $b==0) {
+		zeroError();
+		return false;
+	}	
 	if(is_numeric($a) && is_numeric($b)){
-		return $a%$b;
+		return $a%$b . PHP_EOL;
 	}else {
-		return "ERROR: both arguments must be numbers" . PHP_EOL;
+		error();
 	}
 }
-echo add(6, 12) . PHP_EOL;
-echo subtract(20,2) . PHP_EOL;
-echo multiply(9,2) . PHP_EOL;
-echo divide(36,0) . PHP_EOL;
-echo modulus(5,2) . PHP_EOL;
+function error(){
+	echo "ERROR: must be all numbers!" . PHP_EOL;
+}
+function zeroError(){
+	echo "ERROR: cannot divide by ZERO!" . PHP_EOL;
+}
+echo add(6, 76) . PHP_EOL;
+echo subtract(20,82) . PHP_EOL;
+echo multiply(394876,963) . PHP_EOL;
+echo divide(36,234543634) . PHP_EOL;
+echo modulus(5,34320) . PHP_EOL;
 ?>
