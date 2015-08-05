@@ -10,12 +10,14 @@ function parseContacts($textInput)
     $contents = trim(fread($handle, filesize($textInput)));
     $contactsArray = explode(PHP_EOL, $contents);
     $contacts = array();
+    
     foreach ($contactsArray as $key => $contact) {
     	$secondLevelArray['name'] = explode('|', $contact)[0];
     	$secondLevelArray['number'] = explode('|', $contact)[1];
     	$secondLevelArray['number'] = formatNumbers($secondLevelArray['number']);
     	array_push($contacts, $secondLevelArray);
     }
+    
     fclose($handle);
     return $contacts;
 }

@@ -5,7 +5,7 @@ $firstName = fgets(STDIN);
 
 fwrite(STDOUT, 'whats your last name?')
 
-$lastName = fgets(STDIN,0);
+$lastName = fgets(STDIN,);
 
 fwrite(STDOUT, "Hello, $firstName $lastName\n");
 ?>

@@ -29,6 +29,7 @@ isInArray($query2, $names);
 function compare($names, $compare){
 	$result = array_intersect($names, $compare);
 	echo $result;
+	if($result)
 }
 compare($names, $compare);
 

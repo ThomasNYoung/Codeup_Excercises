@@ -1,9 +1,9 @@
 <?php
  // List of famous peeps
- function humanizedList($array) {
- 	// if($sort){
- 	// 	sort($array);
- 	// }
+ function humanizedList($array, $sort = false) {
+ 	if($sort){
+ 		sort($array);
+ 	}
  	$lastItem = array_pop($array);
  	$newString = implode(', ', $array);
  	return $newString . ", and " . $lastItem;
