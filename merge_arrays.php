@@ -49,7 +49,9 @@ function compare($names, $compare){
 	}
 	return $commonName;
 }
-echo "there are " . compare($names, $compare) . " names in common" . PHP_EOL;
+echo "There are " . compare($names, $compare) . " names in common" . PHP_EOL;
+
+
 	
 
 ?>

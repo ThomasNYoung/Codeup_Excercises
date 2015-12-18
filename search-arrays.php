@@ -13,7 +13,7 @@ function isInArray($query, $names){
 	$result = array_search($query, $names);
 	echo $result;
 	if($result!==false){
-		echo $query . " is in the array" . PHP_EOL;
+		echo $names[$result] . " is in the array" . PHP_EOL;
 		return true;
 	}else {
 		echo $query . " is not in the array" . PHP_EOL;
@@ -26,11 +26,18 @@ isInArray($query, $names);
 isInArray($query2, $names);
 	
 
-function compare($names, $compare){
+function compareArray($names, $compare){
+
+	$count = 0;
+	foreach ($names as $name) {
+		if
+	}
 	$result = array_intersect($names, $compare);
-	echo $result;
-	if($result)
+	// return $result;
+	if($result){
+		echo $result;
+	}
 }
-compare($names, $compare);
+compareArray($names, $compare);
 
 ?>
